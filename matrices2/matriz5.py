@@ -2,6 +2,7 @@
 dada una matriz de identidad nxn
 mostrar en color azul solo la diagonal de 1
 """
+n = int(input("dimensiones de la matriz cuadrada: "))
 def mostrarAzul(n):
     azul = "\033[94m"
     reset = "\033[0m" 
@@ -15,4 +16,4 @@ def mostrarAzul(n):
                 fila.append("0")
         print(" ".join(fila))
 
-mostrarAzul(3)
+mostrarAzul(n)
