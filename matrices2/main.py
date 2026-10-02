@@ -38,11 +38,13 @@ def menu():
         elif opcion == 4:
             multMatrices()
         elif opcion == 5:
-            try:
-                n = int(input("dimensiones de la matriz cuadrada: "))
-                mostrarAzul(n)
-            except ValueError:
-                print("Error:Ingrese un número entero porfavor.")
+            while True:
+                try:
+                    n = int(input("dimensiones de la matriz cuadrada: "))
+                    break
+                except ValueError:
+                    print("Error:Ingrese un número entero porfavor.")
+            mostrarAzul(n)  
         pausar()
 
 menu()
