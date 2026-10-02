@@ -4,9 +4,9 @@ def calculadoraMatriz():
     print("Ingrese los valores en la matriz.")
     matriz=[]
 
-    for fila in range (2):
+    for fila in range (1):
         matriz.append([])
-        for columna in range(2):
+        for columna in range(1):
             while True:
                 try:
                     valor = int(input(f"Fila: {fila+1}, Columna: {columna+1}: "))

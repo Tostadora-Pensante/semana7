@@ -1,8 +1,8 @@
-from matriz1 import escaledMatriz
-from matriz2 import calculadoraMatriz
-from matriz3 import sumMatrices 
-from matriz4v2 import multMatrices 
-from matriz5 import mostrarAzul 
+from escalarmatriz import escaledMatriz
+from multmatriz import calculadoraMatriz
+from sumaMatriz import sumMatrices 
+from multiplicandoMatrices import multMatrices 
+from diagonalAzul import mostrarAzul 
 
 def pausar():
     input("Presione Enter para continuar...")
