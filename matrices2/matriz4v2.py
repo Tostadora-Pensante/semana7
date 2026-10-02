@@ -3,11 +3,29 @@ def multMatrices():
     matrizA = []
     matrizB = []
     matrizC = []
-    dimension = int(input("dimensiones de la matriz cuadrada: "))
+    while True:
+        try:
+            dimension = int(input("dimensiones de la matriz cuadrada: "))
+            if dimension < 1:
+                print("La dimension debe ser mayor a uno.")
+                continue
+            break
+        except ValueError:
+            print("Porfavor ingrese un numero positivo.")
+            
+
+
     for i in range(dimension):
         matrizA.append([])
         for j in range(dimension):
-            matrizA[i].append(int(input(f"fila {i+1}, columna {j+1}: ")))
+            while True:
+                try:
+                    matrizA[i].append(int(input(f"fila {i+1}, columna {j+1}: ")))
+                    break
+                except ValueError:
+                    print("Porfavor ingrese un numero entero valido.")
+                    
+    
     print("="*13)
     print("Matriz A")
     for fila in matrizA:
@@ -20,7 +38,16 @@ def multMatrices():
     for i in range(dimension):
         matrizB.append([])
         for j in range(dimension):
-            matrizB[i].append(int(input(f"fila {i+1}, columna {j+1}: ")))
+            while True:
+                try:
+                    matrizB[i].append(int(input(f"fila {i+1}, columna {j+1}: ")))
+                    break
+                except ValueError:
+                    print("Ingrese un numero valido.")
+                    
+                    
+   
+   
     print("="*13)
 
     print("Matriz B")

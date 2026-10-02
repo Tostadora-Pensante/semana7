@@ -5,12 +5,18 @@ def sumMatrices():
     print("="*13)
     print("Ingrese los valores en la matriz 1:")
     matriz=[]
-
+    
     for fila in range (3):
         matriz.append([])
         for columna in range(3):
-            valor = int(input(f"Fila: {fila+1}, Columna: {columna+1}: "))
-            matriz[fila].append(valor)
+            while True:
+                try:
+                    valor = int(input(f"Fila: {fila+1}, Columna: {columna+1}: "))
+                    break
+                except ValueError:
+                    print("Ingrese un numero valido.")
+                    
+                matriz[fila].append(valor)
 
     print("="*13)
     print("Ingrese los valores de la segunda matriz:")
@@ -19,9 +25,17 @@ def sumMatrices():
     for fila in range (3):
         matrizB.append([])
         for columna in range(3):
-            valor = int(input(f"Fila: {fila+1}, Columna: {columna+1}: "))
+            while True:
+                try:
+                    valor = int(input(f"Fila: {fila+1}, Columna: {columna+1}: "))
+                    break
+                except ValueError:
+                    print("Porfavor ingrese un numero valido.")
+                
             matrizB[fila].append(valor)
-
+  
+    
+    
     matrizC = []
     for i in range(len(matriz)):
         matrizC.append([])

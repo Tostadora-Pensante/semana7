@@ -7,15 +7,23 @@ def calculadoraMatriz():
     for fila in range (2):
         matriz.append([])
         for columna in range(2):
-            valor = int(input(f"Fila: {fila+1}, Columna: {columna+1}: "))
+            while True:
+                try:
+                    valor = int(input(f"Fila: {fila+1}, Columna: {columna+1}: "))
+                    break
+                except ValueError:
+                    print("Entrada inválida. Debe ingresar un número entero.")
             matriz[fila].append(valor)
-
-
-
 
     for fila in matriz:
         print(fila)
-    k = int(input("Ahora dime el escalar para multiplicar a la matriz: "))
+
+    while True:
+        try:
+            k = int(input("Ahora dime el escalar para multiplicar a la matriz: "))
+            break
+        except ValueError:
+            print("Entrada inválida. Debe ingresar un número entero.")
 
     matrizB = []
     for i in range(len(matriz)):

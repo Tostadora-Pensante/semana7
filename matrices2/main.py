@@ -42,7 +42,7 @@ def menu():
                 n = int(input("dimensiones de la matriz cuadrada: "))
                 mostrarAzul(n)
             except ValueError:
-                print("Entrada inválida. Debe ser un número entero.")
+                print("Error:Ingrese un número entero porfavor.")
         pausar()
 
 menu()
