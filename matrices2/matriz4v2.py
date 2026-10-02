@@ -1,0 +1,51 @@
+#multiplicaicon de matrices cuadradas
+def multMatrices():
+    matrizA = []
+    matrizB = []
+    matrizC = []
+    dimension = int(input("dimensiones de la matriz cuadrada: "))
+    for i in range(dimension):
+        matrizA.append([])
+        for j in range(dimension):
+            matrizA[i].append(int(input(f"fila {i+1}, columna {j+1}: ")))
+    print("="*13)
+    print("Matriz A")
+    for fila in matrizA:
+        print(fila)
+
+    print("="*13)
+    print("Ambas matrices tienen las mismas dimensiones")
+    print("Inserte los valores de la matriz B")
+
+    for i in range(dimension):
+        matrizB.append([])
+        for j in range(dimension):
+            matrizB[i].append(int(input(f"fila {i+1}, columna {j+1}: ")))
+    print("="*13)
+
+    print("Matriz B")
+    for fila in matrizB:
+        print(fila)
+
+    print("="*13)
+
+    for i in range(dimension):
+        fila = []
+        for j in range(dimension):
+            suma = 0
+            for k in range(dimension):
+                suma += matrizA[i][k] * matrizB[k][j]
+            fila.append(suma)
+        matrizC.append(fila)
+
+    print("Matriz A")
+    for fila in matrizA:
+        print(fila)
+    print("="*13)
+    print("Matriz B")
+    for fila in matrizB:
+        print(fila)
+    print("="*13)
+    print("La matriz resultante es:")
+    for fila in matrizC:
+        print(fila)

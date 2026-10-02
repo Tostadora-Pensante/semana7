@@ -1,22 +1,23 @@
-matriz = [
+def escaledMatriz():
+    matriz = [
     [1,2],
     [3,4]
-]
+    ]
 
-for fila in matriz:
-    print (fila)
+    for fila in matriz:
+        print (fila)
 
-#escalar
+    #escalar
 
-k = 5
+    k = 5
 
-matrizB = []
-for i in range(len(matriz)):
-    matrizB.append([])
-    for j  in range(len(matriz)):
-        matrizB[i].append(k * matriz[i][j])
+    matrizB = []
+    for i in range(len(matriz)):
+        matrizB.append([])
+        for j in range(len(matriz)):
+            matrizB[i].append(k * matriz[i][j])
 
-print("="*13)
-print("Escalera", k)
-for fila in matrizB:
-    print(fila)
+    print("="*13)
+    print("Escalera", k)
+    for fila in matrizB:
+        print(fila)
